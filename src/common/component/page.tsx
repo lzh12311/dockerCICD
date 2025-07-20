@@ -15,6 +15,7 @@ const Page = React.forwardRef<PageContext, PageProps>((props, ref) => {
     const location = Dom.useLocation();
     const navigate = Dom.useNavigate();
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     React.useEffect(() => init(), [location]);
 
     const contextValue: PageContext = {

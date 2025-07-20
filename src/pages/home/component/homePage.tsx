@@ -2,7 +2,6 @@ import { JSX } from "react";
 import * as React from "react";
 import * as PageStore from "../store/store";
 import { PageContext } from "common/model/context";
-import * as Dom from "react-router-dom";
 import { Navigator } from "../../../common/router/navigtor";
 
 type Home = {
@@ -17,7 +16,7 @@ const HomePageContent: React.FC<Home> = props => {
     const dispatch = PageStore.useDispatch();
     const products = PageStore.useSelector(state => state.root.products);
 
-    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     React.useEffect(() => {
         dispatch(PageStore.rootAction.rootAction.getProductAsync({}))
             .unwrap()
