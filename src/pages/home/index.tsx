@@ -13,10 +13,10 @@ const HomePage: React.FC = () => {
   const navigate = Dom.useNavigate();
   const location = Dom.useLocation();
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     Navigator.register(navigate)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location])
 
 

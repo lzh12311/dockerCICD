@@ -16,7 +16,6 @@ const HomePageContent: React.FC<Home> = props => {
     const dispatch = PageStore.useDispatch();
     const products = PageStore.useSelector(state => state.root.products);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     React.useEffect(() => {
         dispatch(PageStore.rootAction.rootAction.getProductAsync({}))
             .unwrap()
@@ -24,6 +23,7 @@ const HomePageContent: React.FC<Home> = props => {
             .finally(() => {
                 setIsLoading(false)
             })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const build = (): JSX.Element => {
