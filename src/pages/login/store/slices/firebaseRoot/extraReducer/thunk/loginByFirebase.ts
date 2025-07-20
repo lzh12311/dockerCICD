@@ -1,4 +1,3 @@
-import { FirebaseUser } from "../../../../../../../common/clients/authentication/firebase"
 import * as Firebase from "../../../../../../../common/clients/authentication";
 import { ActionReducerMapBuilder, createAsyncThunk } from "@reduxjs/toolkit";
 import * as Store from "../../../../store"

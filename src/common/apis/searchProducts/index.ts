@@ -1,7 +1,7 @@
 
 import { DocumentNode, OperationVariables } from "@apollo/client";
 
-import { mutation, query } from "common/clients/request";
+import { query } from "common/clients/request";
 
 /**
  * The name of the request.

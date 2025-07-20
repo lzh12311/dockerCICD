@@ -1,8 +1,7 @@
 import { PageContext } from "common/model/context";
 import * as React from "react";
 import * as Dom from "react-router-dom";
-import * as AppStore from "common/store/store";
-import { NavigationKeys, Navigator } from "common/router/navigtor";
+import { Navigator } from "common/router/navigtor";
 
 type PageProps = {
 
@@ -14,9 +13,6 @@ type PageProps = {
 
 const Page = React.forwardRef<PageContext, PageProps>((props, ref) => {
     const location = Dom.useLocation();
-    const dispatch = AppStore.useDispatch();
-    const displayName = AppStore.useSelector(state => state.root.user?.displayName);
-    const alias = AppStore.useSelector(state => state.root.user?.alias);
     const navigate = Dom.useNavigate();
 
     React.useEffect(() => init(), [location]);

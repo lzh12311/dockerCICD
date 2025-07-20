@@ -1,6 +1,4 @@
-import { emit } from "process";
 import * as Firebase from "./firebase";
-import { FirebaseUser } from "./firebase";
 
 const getUser = (): (Firebase.FirebaseUser | null) => {
     return Firebase.getUser();

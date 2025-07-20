@@ -1,9 +1,6 @@
 import { ActionReducerMapBuilder, createAsyncThunk } from "@reduxjs/toolkit"
 import { Product } from "../../../../../../../common/component/models/product";
-import searchProdcut from "../../../../../../../common/apis/searchProductById";
 import * as Store from "../../../../store"
-import { AsyncLock } from "common/clients/asyncLock";
-import getAllProductsFromGraph from "common/apis/getProduct/getAllProductsFromGraph";
 import searchProductGraphQl from "common/apis/searchProducts/searchProduct";
 
 type SearchDto = {

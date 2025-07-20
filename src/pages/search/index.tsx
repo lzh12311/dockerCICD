@@ -6,7 +6,7 @@ import store from "./store/store";
 import { Provider } from "react-redux";
 import SearchListPage, { TableProps } from "./component/descriptionFC";
 import { Navigator } from "../../common/router/navigtor";
-import { Badge, DescriptionsProps } from "antd";
+import { Badge } from "antd";
 
 
 
@@ -14,13 +14,6 @@ const SearchPage: React.FC = (props) => {
     const navigate = Dom.useNavigate();
     const location = Dom.useLocation();
 
-    const convertToDescriptionsItems = (userItems: TableProps['items']): DescriptionsProps['items'] => {
-        return userItems?.map(item => ({
-            label: item.label,
-            span: 'filled',
-            children: item.children,
-        }));
-    };
     const userInput: TableProps['items'] = [
         { label: 'UserName', children: 'Zhou Maomao' },
         { label: 'Live', children: 'Hangzhou, Zhejiang' },
@@ -70,7 +63,7 @@ const SearchPage: React.FC = (props) => {
     React.useEffect(() => {
         // eslint-disable-next-line
         Navigator.register(navigate)
-    }, [location])
+    }, [location, navigate])
 
     const build = (): JSX.Element => {
         return (

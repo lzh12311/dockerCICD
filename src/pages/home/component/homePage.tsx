@@ -1,21 +1,19 @@
 import { JSX } from "react";
 import * as React from "react";
-import store, * as PageStore from "../store/store";
+import * as PageStore from "../store/store";
 import { PageContext } from "common/model/context";
 import * as Dom from "react-router-dom";
-import * as Redux from "react-redux";
-import { NavigationKeys, Navigator } from "../../../common/router/navigtor";
+import { Navigator } from "../../../common/router/navigtor";
 
-type Home ={
+type Home = {
     context: React.Context<PageContext>;
 }
 
-const HomePageContent :React.FC<Home> = props=>{
+const HomePageContent: React.FC<Home> = props => {
 
     const [isLoading, setIsLoading] = React.useState(true);
-    const navigate = Dom.useNavigate();
-    const context =React.useContext(props.context);
-    
+    const context = React.useContext(props.context);
+
     const dispatch = PageStore.useDispatch();
     const products = PageStore.useSelector(state => state.root.products);
 
@@ -39,19 +37,19 @@ const HomePageContent :React.FC<Home> = props=>{
             )
         } else {
             return (
-                    <div>
-                        {context.title}
-                        {context.title}
-                        <button onClick={Navigator.navigateToSearch}>go to search</button>
-                        <ul>
-                            {products?.map((product, index) => (
-                                <li key={index}>
-                                    {product.name}
-                                    <p>{product.price}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                <div>
+                    {context.title}
+                    {context.title}
+                    <button onClick={Navigator.navigateToSearch}>go to search</button>
+                    <ul>
+                        {products?.map((product, index) => (
+                            <li key={index}>
+                                {product.name}
+                                <p>{product.price}</p>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             )
         }
     }

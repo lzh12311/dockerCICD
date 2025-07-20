@@ -2,10 +2,8 @@ import * as React from "react";
 import * as Redux from "react-redux";
 
 import AppFrame from "./appframe";
-import * as Dom from "react-router-dom";
 
 import * as  AppStore from "common/store/store"
-import { Navigator } from "../../common/router/navigtor";
 import { FirebaseUser } from "common/clients/authentication/firebase";
 import * as UserWebSocket from "common/clients/websocket";
 

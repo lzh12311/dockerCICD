@@ -1,6 +1,5 @@
 import React, { JSX } from "react"
 import * as PageStore from "../store/store";
-import * as Authentication from "../../../common/clients/authentication"
 
 const Content = (): JSX.Element => {
     const dispatch = PageStore.useDispatch();
