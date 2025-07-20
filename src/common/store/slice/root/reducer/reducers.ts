@@ -1,0 +1,1 @@
+export { onUpdateUserInfo } from "./updateUserInfo"

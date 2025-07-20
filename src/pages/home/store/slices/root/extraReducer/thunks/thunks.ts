@@ -1,0 +1,2 @@
+
+export { getProductAsync } from "./getAllProducts";

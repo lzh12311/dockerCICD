@@ -1,0 +1,1 @@
+export { loginWithFirebase } from "./loginByFirebase"
