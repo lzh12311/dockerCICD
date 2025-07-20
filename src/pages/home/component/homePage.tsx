@@ -15,7 +15,7 @@ const HomePageContent :React.FC<Home> = props=>{
     const [isLoading, setIsLoading] = React.useState(true);
     const navigate = Dom.useNavigate();
     const context =React.useContext(props.context);
-
+    
     const dispatch = PageStore.useDispatch();
     const products = PageStore.useSelector(state => state.root.products);
 

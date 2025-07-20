@@ -11,7 +11,7 @@ type TextAreaProps = {
 const textAreaFC: FC<TextAreaProps> = props => {
     return (
         <TextArea
-            value={props.content} // 确保 child 是字符串（可根据实际数据处理）
+            value={props.content} 
             readOnly
             autoSize={{ minRows: 3, maxRows: 3 }}
             style={{ resize: 'none' }}

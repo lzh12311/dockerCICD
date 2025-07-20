@@ -8,6 +8,7 @@ type HeaderProps = {
 
 
 const Header: React.FC<HeaderProps> = props => {
+    
     const userInfo = AppStore.useSelector(state => state.root.user)
 
     const build = (): React.JSX.Element => {
